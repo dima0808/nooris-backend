@@ -3,16 +3,21 @@ package nu.nooris.noorisbackend.web;
 import static java.net.URI.create;
 import static nu.nooris.noorisbackend.util.ValidationUtils.getErrorResponseOfFieldErrors;
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
+import static org.springframework.http.HttpStatus.FORBIDDEN;
+import static org.springframework.http.HttpStatus.NOT_FOUND;
 import static org.springframework.http.HttpStatus.UNAUTHORIZED;
 import static org.springframework.http.ProblemDetail.forStatusAndDetail;
 
 import lombok.extern.slf4j.Slf4j;
+import nu.nooris.noorisbackend.service.exception.MenuItemNotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ProblemDetail;
 import org.springframework.http.ResponseEntity;
 import org.springframework.lang.NonNull;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -30,6 +35,43 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
     problemDetail.setType(create("bad-credentials"));
     problemDetail.setTitle("Bad Credentials");
     return ResponseEntity.status(UNAUTHORIZED).body(problemDetail);
+  }
+
+  @ExceptionHandler(AccessDeniedException.class)
+  public ProblemDetail handleAccessDenied(AccessDeniedException ex) {
+    log.info("Access denied exception raised");
+    ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(FORBIDDEN, ex.getMessage());
+    problemDetail.setType(create("access-denied"));
+    problemDetail.setTitle("Access Denied");
+    return problemDetail;
+  }
+
+  @ExceptionHandler(AuthenticationException.class)
+  public ProblemDetail handleAuthException(AuthenticationException ex) {
+    log.info("Authentication exception raised");
+    ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(UNAUTHORIZED, ex.getMessage());
+    problemDetail.setType(create("authentication-error"));
+    problemDetail.setTitle("Authentication Error");
+    return problemDetail;
+  }
+
+  @ExceptionHandler(MenuItemNotFoundException.class)
+  public ResponseEntity<ProblemDetail> handleMenuItemNotFoundException(
+      MenuItemNotFoundException ex) {
+    log.info("Menu item not found exception raised");
+    ProblemDetail problemDetail = forStatusAndDetail(NOT_FOUND, ex.getMessage());
+    problemDetail.setType(create("menu-item-not-found"));
+    problemDetail.setTitle("Menu Item Not Found");
+    return ResponseEntity.status(NOT_FOUND).body(problemDetail);
+  }
+
+  @ExceptionHandler(IllegalArgumentException.class)
+  public ResponseEntity<ProblemDetail> handleIllegalArgumentException(IllegalArgumentException ex) {
+    log.info("Illegal argument exception raised");
+    ProblemDetail problemDetail = forStatusAndDetail(BAD_REQUEST, ex.getMessage());
+    problemDetail.setType(create("illegal-argument"));
+    problemDetail.setTitle("Illegal Argument");
+    return ResponseEntity.status(BAD_REQUEST).body(problemDetail);
   }
 
   @Override
