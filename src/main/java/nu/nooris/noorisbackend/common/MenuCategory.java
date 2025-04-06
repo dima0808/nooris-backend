@@ -15,7 +15,7 @@ public enum MenuCategory {
   KEBAB("Kebab"),
   SALAD("Sallad"),
   PIZZA("Pizza"),
-  BARNMENY("Barnmeny"),
+  CHILD_MENU("Barnmeny"),
   DESSERT("Desserter"),
   ALCOHOL("Alkohol");
 

@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Schema(description = "Variant of a menu item")
 public class MenuItemVariantDto {
 
-  @Schema(description = "Label for the variant. Must be null if only one variant exists", example = "180g")
+  @Schema(description = "Label for the variant. If multiple variants are available, this field must be set", example = "180g")
   private String label;
 
   @NotNull(message = "Price is mandatory")

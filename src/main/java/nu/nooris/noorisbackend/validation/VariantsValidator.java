@@ -11,7 +11,7 @@ public class VariantsValidator implements
   @Override
   public boolean isValid(List<MenuItemVariantDto> variants, ConstraintValidatorContext context) {
     if (variants.size() == 1) {
-      return variants.get(0).getLabel() == null;
+      return true;
     }
     return variants.stream().allMatch(v -> v.getLabel() != null);
   }

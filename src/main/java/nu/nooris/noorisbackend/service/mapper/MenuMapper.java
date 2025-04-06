@@ -48,6 +48,8 @@ public interface MenuMapper {
   @Mapping(target = "variants", source = "variants", qualifiedByName = "toMenuItemVariant")
   MenuItem toMenuItem(MenuItemDto menuItemDto);
 
+  List<MenuItem> toMenuItem(List<MenuItemDto> menuItemDtos);
+
   @Mapping(target = "label", source = "label")
   @Mapping(target = "price", source = "price")
   @Named("toMenuItemVariant")

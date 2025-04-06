@@ -1,0 +1,795 @@
+[
+  {
+    "name": "Vitlöksbröd med aioli",
+    "category": "STARTERS",
+    "description": null,
+    "variants": [
+      {
+        "label": null,
+        "price": 70
+      }
+    ]
+  },
+  {
+    "name": "Flamberade räkor",
+    "category": "STARTERS",
+    "description": "Cognacsflamberade räkor, vitlök, chili, bröd.",
+    "variants": [
+      {
+        "label": null,
+        "price": 99
+      }
+    ]
+  },
+  {
+    "name": "Bresaola skinka",
+    "category": "STARTERS",
+    "description": "Med sallad, rucola, pinjenötter, olivolja och parmesan.",
+    "variants": [
+      {
+        "label": null,
+        "price": 120
+      }
+    ]
+  },
+  {
+    "name": "Carpaccio på oxfilé",
+    "category": "STARTERS",
+    "description": "Oxfilén serveras med god olivolja, rostade pinjenötter, flingsalt, svartpeppar, hyvlad parmesan och rucola.",
+    "variants": [
+      {
+        "label": null,
+        "price": 129
+      }
+    ]
+  },
+  {
+    "name": "Pepparstek av oxfilé",
+    "category": "MEAT",
+    "description": "Serveras med pepparsås, grönsaker, pommes eller potatisgratäng.",
+    "variants": [
+      {
+        "label": "180g",
+        "price": 299
+      },
+      {
+        "label": "250g",
+        "price": 379
+      }
+    ]
+  },
+  {
+    "name": "Oxfilé",
+    "category": "MEAT",
+    "description": "Serveras med béarnaisesås, grönsaker, persiljesmör och pommes eller potatisgratäng.",
+    "variants": [
+      {
+        "label": "180g",
+        "price": 299
+      },
+      {
+        "label": "250g",
+        "price": 379
+      }
+    ]
+  },
+  {
+    "name": "Oxfilébitar",
+    "category": "MEAT",
+    "description": "Oxfilé serveras med grönsaker, bearnaisesås eller pepparsås och pommes.",
+    "variants": [
+      {
+        "label": "180g",
+        "price": 270
+      }
+    ]
+  },
+  {
+    "name": "Mörad entrecote",
+    "category": "MEAT",
+    "description": "Serveras med grönsaker, bearnaisesås, persiljesmör, pommes eller potatisgratäng.",
+    "variants": [
+      {
+        "label": "250g",
+        "price": 320
+      }
+    ]
+  },
+  {
+    "name": "Mörad ryggbiff",
+    "category": "MEAT",
+    "description": "Serveras med grönsaker, valfri potatis, pepparsås eller bearnaisesås.",
+    "variants": [
+      {
+        "label": "250g",
+        "price": 320
+      }
+    ]
+  },
+  {
+    "name": "Plankstek, klassik oxfilé",
+    "category": "MEAT",
+    "description": "Serveras med duchessepotatis, grillad tomat, baconlindad grön sparris, béarnaisesås.",
+    "variants": [
+      {
+        "label": "180g",
+        "price": 320
+      },
+      {
+        "label": "250g",
+        "price": 420
+      }
+    ]
+  },
+  {
+    "name": "Fjällröding",
+    "category": "FISH",
+    "description": "Serveras med smörslungad mandelpotatis, grillad citron, grönsaker och vitvinsås.",
+    "variants": [
+      {
+        "label": null,
+        "price": 249
+      }
+    ]
+  },
+  {
+    "name": "Plankstek på lax",
+    "category": "FISH",
+    "description": "Serveras med duchessepotatis, grillad tomat, sparris, citron, hollandaisesås, färsk timjan.",
+    "variants": [
+      {
+        "label": null,
+        "price": 299
+      }
+    ]
+  },
+  {
+    "name": "Fish & Chips",
+    "category": "FISH",
+    "description": "Gourmetfilé serveras med grönsaker, hollandaisesås, pommes.",
+    "variants": [
+      {
+        "label": null,
+        "price": 139
+      }
+    ]
+  },
+  {
+    "name": "Oxfilé pasta",
+    "category": "PASTA",
+    "description": "Pasta lingune oxfilé, paprika, lök, champinjoner, persilja, pepparsås, parmesanost, ruccola.",
+    "variants": [
+      {
+        "label": null,
+        "price": 189
+      }
+    ]
+  },
+  {
+    "name": "Pappardelle marinara",
+    "category": "PASTA",
+    "description": "Pasta pappardelle, lax, tigerräkor och gröna musslor i en härlig chardonnaysås. Toppas med parmesanost och färsk timjan.",
+    "variants": [
+      {
+        "label": null,
+        "price": 179
+      }
+    ]
+  },
+  {
+    "name": "Vegetarisk pasta",
+    "category": "PASTA",
+    "description": "Pasta lingune, paprika, lök, champinjoner, persilja, zuccini, tomat, grädde, parmesanost, ruccola.",
+    "variants": [
+      {
+        "label": null,
+        "price": 129
+      }
+    ]
+  },
+  {
+    "name": "Pasta alfredo med kyckling",
+    "category": "PASTA",
+    "description": "Grillad kyckling, pasta linguine, färsk vitlök, lök, persilja, grädde, parmesanost, ruccola.",
+    "variants": [
+      {
+        "label": null,
+        "price": 149
+      }
+    ]
+  },
+  {
+    "name": "Classic burger",
+    "category": "SMASH_BURGER",
+    "description": "150g. Tillägg extra kött: 49 kr. Serveras med vår egen originaldressing, krispsallad, tomat, bacon, cheddarost.",
+    "variants": [
+      {
+        "label": null,
+        "price": 159
+      }
+    ]
+  },
+  {
+    "name": "Nooris burger",
+    "category": "SMASH_BURGER",
+    "description": "150g. Tillägg extra kött: 49 kr. Serveras med krispsallad, stekta champinjoner, gul lök, BBQ-sås, cheddarost, chipotle mayo.",
+    "variants": [
+      {
+        "label": null,
+        "price": 159
+      }
+    ]
+  },
+  {
+    "name": "Sweet & spicy",
+    "category": "SMASH_BURGER",
+    "description": "150g. Tillägg extra kött: 49 kr. Serveras med sweet & spicy dressing, cheddarost, stekta champinjoner, sauterad gul lök, färska jalapenos.",
+    "variants": [
+      {
+        "label": null,
+        "price": 159
+      }
+    ]
+  },
+  {
+    "name": "Döner grillad kebab",
+    "category": "KEBAB",
+    "description": "Grillad kebab serveras i vårt eget pitabröd, med sallad, tomat, lök, pommes och vår egen vitlöksås.",
+    "variants": [
+      {
+        "label": null,
+        "price": 129
+      }
+    ]
+  },
+  {
+    "name": "Kebabtallrik",
+    "category": "KEBAB",
+    "description": "Grillad kebab, pommes, sallad, tomat, gurka, lök och vår egen vitlöksås.",
+    "variants": [
+      {
+        "label": null,
+        "price": 119
+      }
+    ]
+  },
+  {
+    "name": "Kyckling kebab i pitabröd",
+    "category": "KEBAB",
+    "description": "Grillad kyckling, sallad, tomat, lök, pommes och currysås.",
+    "variants": [
+      {
+        "label": null,
+        "price": 129
+      }
+    ]
+  },
+  {
+    "name": "Kyckling kebab tallrik",
+    "category": "KEBAB",
+    "description": "Grillad kyckling, kebab, pommes, sallad, tomat, gurka, lök.",
+    "variants": [
+      {
+        "label": null,
+        "price": 119
+      }
+    ]
+  },
+  {
+    "name": "Lammspett",
+    "category": "KEBAB",
+    "description": "Grillat, marinerat lammkött. Serveras med grillad tomat, aubergine, ris, bröd, sallad och tzatziki.",
+    "variants": [
+      {
+        "label": null,
+        "price": 199
+      }
+    ]
+  },
+  {
+    "name": "Kycklingspett",
+    "category": "KEBAB",
+    "description": "Grillade, marinerade kycklinginnerfilé-spett serveras med grillad tomat, aubergine, ris, bröd, sallad och tzatziki.",
+    "variants": [
+      {
+        "label": null,
+        "price": 149
+      }
+    ]
+  },
+  {
+    "name": "Caesarsallad",
+    "category": "SALAD",
+    "description": "Kycklingfilé, bacon, romansallad, körsbärstomat, krutonger, caesardressing, ruccola, parmesanost.",
+    "variants": [
+      {
+        "label": null,
+        "price": 139
+      }
+    ]
+  },
+  {
+    "name": "Räksallad",
+    "category": "SALAD",
+    "description": "Tigerräkor, romansallad, körsbärstomat, avokado, hollandaisesås, citron, ruccola.",
+    "variants": [
+      {
+        "label": null,
+        "price": 139
+      }
+    ]
+  },
+  {
+    "name": "Oxfilésallad",
+    "category": "SALAD",
+    "description": "Oxfilé, Mex sallad, körsbärstomat, rödlök, halloumi, parmesanost, pinjenötter, rucola.",
+    "variants": [
+      {
+        "label": null,
+        "price": 179
+      }
+    ]
+  },
+  {
+    "name": "Margarita",
+    "category": "PIZZA",
+    "description": "Tomatsås, mozzarellaost, färsk oregano.",
+    "variants": [
+      {
+        "label": null,
+        "price": 119
+      }
+    ]
+  },
+  {
+    "name": "Salami",
+    "category": "PIZZA",
+    "description": "Tomatsås, mozzarellaost, originalsalami, färsk oregano.",
+    "variants": [
+      {
+        "label": null,
+        "price": 139
+      }
+    ]
+  },
+  {
+    "name": "Madrid",
+    "category": "PIZZA",
+    "description": "Tomatsås, mozzarellaost, körsbärstomat, bresaolaskinka, parmesanost.",
+    "variants": [
+      {
+        "label": null,
+        "price": 149
+      }
+    ]
+  },
+  {
+    "name": "Marinara",
+    "category": "PIZZA",
+    "description": "Tomatsås, mozzarellaost, tigerräkor, gröna musslor, lax, färsk timjan.",
+    "variants": [
+      {
+        "label": null,
+        "price": 149
+      }
+    ]
+  },
+  {
+    "name": "Kebabpizza",
+    "category": "PIZZA",
+    "description": "Tomatsås, mozzarellaost, kebab (nötkött), lök, körsbärstomat, kebabsås.",
+    "variants": [
+      {
+        "label": null,
+        "price": 139
+      }
+    ]
+  },
+  {
+    "name": "Barn hamburgare",
+    "category": "CHILD_MENU",
+    "description": "Med pommes och valfri dipp",
+    "variants": [
+      {
+        "label": null,
+        "price": 99
+      }
+    ]
+  },
+  {
+    "name": "Krispig kycklingfilé",
+    "category": "CHILD_MENU",
+    "description": "Med pommes och valfri dipp",
+    "variants": [
+      {
+        "label": null,
+        "price": 99
+      }
+    ]
+  },
+  {
+    "name": "Plättar",
+    "category": "CHILD_MENU",
+    "description": "Med sylt och grädde",
+    "variants": [
+      {
+        "label": null,
+        "price": 110
+      }
+    ]
+  },
+  {
+    "name": "Strawberry cheesecake",
+    "category": "DESSERT",
+    "description": "Serveras med vaniljglass och jordgubbar",
+    "variants": [
+      {
+        "label": null,
+        "price": 120
+      }
+    ]
+  },
+  {
+    "name": "Chocolate fudge cake",
+    "category": "DESSERT",
+    "description": "Serveras med vaniljglass och bärmix",
+    "variants": [
+      {
+        "label": null,
+        "price": 120
+      }
+    ]
+  },
+  {
+    "name": "Vaniljglass med jordgubbar",
+    "category": "DESSERT",
+    "description": null,
+    "variants": [
+      {
+        "label": null,
+        "price": 89
+      }
+    ]
+  },
+  {
+    "name": "Vaniljglass med hjortron",
+    "category": "DESSERT",
+    "description": null,
+    "variants": [
+      {
+        "label": null,
+        "price": 99
+      }
+    ]
+  },
+  {
+    "name": "Mariestads 5,0",
+    "category": "ALCOHOL",
+    "description": null,
+    "variants": [
+      {
+        "label": null,
+        "price": 80
+      }
+    ]
+  },
+  {
+    "name": "Norrlands guld",
+    "category": "ALCOHOL",
+    "description": null,
+    "variants": [
+      {
+        "label": null,
+        "price": 75
+      }
+    ]
+  },
+  {
+    "name": "IPA 5,0",
+    "category": "ALCOHOL",
+    "description": null,
+    "variants": [
+      {
+        "label": null,
+        "price": 89
+      }
+    ]
+  },
+  {
+    "name": "Sol",
+    "category": "ALCOHOL",
+    "description": null,
+    "variants": [
+      {
+        "label": null,
+        "price": 69
+      }
+    ]
+  },
+  {
+    "name": "Heineken",
+    "category": "ALCOHOL",
+    "description": null,
+    "variants": [
+      {
+        "label": null,
+        "price": 69
+      }
+    ]
+  },
+  {
+    "name": "Somersby",
+    "category": "ALCOHOL",
+    "description": null,
+    "variants": [
+      {
+        "label": null,
+        "price": 65
+      }
+    ]
+  },
+  {
+    "name": "Briska",
+    "category": "ALCOHOL",
+    "description": null,
+    "variants": [
+      {
+        "label": null,
+        "price": 65
+      }
+    ]
+  },
+  {
+    "name": "Gin Tonic",
+    "category": "ALCOHOL",
+    "description": "Gin, tonic, lime",
+    "variants": [
+      {
+        "label": null,
+        "price": 140
+      }
+    ]
+  },
+  {
+    "name": "Rom Cola",
+    "category": "ALCOHOL",
+    "description": "Havana club, coca cola, lime",
+    "variants": [
+      {
+        "label": null,
+        "price": 140
+      }
+    ]
+  },
+  {
+    "name": "Xante Special",
+    "category": "ALCOHOL",
+    "description": "Xante, Sprite, lime",
+    "variants": [
+      {
+        "label": null,
+        "price": 140
+      }
+    ]
+  },
+  {
+    "name": "Vodka Red Bull",
+    "category": "ALCOHOL",
+    "description": "Absolut vodka, Red Bull, lime",
+    "variants": [
+      {
+        "label": null,
+        "price": 140
+      }
+    ]
+  },
+  {
+    "name": "Vodka Sprite",
+    "category": "ALCOHOL",
+    "description": "Absolut vodka, Sprite, lime",
+    "variants": [
+      {
+        "label": null,
+        "price": 140
+      }
+    ]
+  },
+  {
+    "name": "Crush 43",
+    "category": "ALCOHOL",
+    "description": "Crush 43, Sprite, lime",
+    "variants": [
+      {
+        "label": null,
+        "price": 140
+      }
+    ]
+  },
+  {
+    "name": "Irish Coffee",
+    "category": "ALCOHOL",
+    "description": "Whiskey, kaffe, grädde",
+    "variants": [
+      {
+        "label": null,
+        "price": 140
+      }
+    ]
+  },
+  {
+    "name": "Kaffe Karlsson",
+    "category": "ALCOHOL",
+    "description": "Cointreau, Baileys, kaffe, grädde",
+    "variants": [
+      {
+        "label": null,
+        "price": 140
+      }
+    ]
+  },
+  {
+    "name": "Rött vin",
+    "category": "ALCOHOL",
+    "description": "Isla Negra",
+    "variants": [
+      {
+        "label": "glas",
+        "price": 85
+      },
+      {
+        "label": "flaska",
+        "price": 399
+      }
+    ]
+  },
+  {
+    "name": "Vitt vin",
+    "category": "ALCOHOL",
+    "description": "Isla Negra",
+    "variants": [
+      {
+        "label": "glas",
+        "price": 85
+      },
+      {
+        "label": "flaska",
+        "price": 399
+      }
+    ]
+  },
+  {
+    "name": "Rosé vin",
+    "category": "ALCOHOL",
+    "description": "Montecampo Rosato, Italien",
+    "variants": [
+      {
+        "label": "glas",
+        "price": 85
+      },
+      {
+        "label": "flaska",
+        "price": 399
+      }
+    ]
+  },
+  {
+    "name": "Cava vin",
+    "category": "ALCOHOL",
+    "description": "Campo Viejo cava brut reserva, Spanien",
+    "variants": [
+      {
+        "label": "glas",
+        "price": 79
+      },
+      {
+        "label": "flaska",
+        "price": 399
+      }
+    ]
+  },
+  {
+    "name": "The Famous Grouse",
+    "category": "ALCOHOL",
+    "description": null,
+    "variants": [
+      {
+        "label": "4cl",
+        "price": 80
+      },
+      {
+        "label": "6cl",
+        "price": 120
+      }
+    ]
+  },
+  {
+    "name": "Jameson Whiskey",
+    "category": "ALCOHOL",
+    "description": null,
+    "variants": [
+      {
+        "label": "4cl",
+        "price": 80
+      },
+      {
+        "label": "6cl",
+        "price": 120
+      }
+    ]
+  },
+  {
+    "name": "Bacardi Carta Fuego",
+    "category": "ALCOHOL",
+    "description": null,
+    "variants": [
+      {
+        "label": "4cl",
+        "price": 80
+      },
+      {
+        "label": "6cl",
+        "price": 120
+      }
+    ]
+  },
+  {
+    "name": "Absolut Vodka",
+    "category": "ALCOHOL",
+    "description": null,
+    "variants": [
+      {
+        "label": "4cl",
+        "price": 80
+      },
+      {
+        "label": "6cl",
+        "price": 120
+      }
+    ]
+  },
+  {
+    "name": "Jägermeister",
+    "category": "ALCOHOL",
+    "description": null,
+    "variants": [
+      {
+        "label": "4cl",
+        "price": 80
+      },
+      {
+        "label": "6cl",
+        "price": 120
+      }
+    ]
+  },
+  {
+    "name": "Fernet Branca",
+    "category": "ALCOHOL",
+    "description": null,
+    "variants": [
+      {
+        "label": "4cl",
+        "price": 80
+      },
+      {
+        "label": "6cl",
+        "price": 120
+      }
+    ]
+  },
+  {
+    "name": "Fireball",
+    "category": "ALCOHOL",
+    "description": null,
+    "variants": [
+      {
+        "label": "4cl",
+        "price": 80
+      },
+      {
+        "label": "6cl",
+        "price": 120
+      }
+    ]
+  }
+]
