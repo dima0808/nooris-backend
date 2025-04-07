@@ -3,6 +3,7 @@ package nu.nooris.noorisbackend.service.impl;
 import java.util.List;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
+import nu.nooris.noorisbackend.common.MenuCategory;
 import nu.nooris.noorisbackend.repository.MenuItemRepository;
 import nu.nooris.noorisbackend.repository.entity.MenuItem;
 import nu.nooris.noorisbackend.service.MenuService;
@@ -18,6 +19,11 @@ public class MenuServiceImpl implements MenuService {
   @Override
   public List<MenuItem> getAllMenuItems() {
     return menuItemRepository.findAll();
+  }
+
+  @Override
+  public List<MenuItem> getMenuItemsByCategory(MenuCategory category) {
+    return menuItemRepository.findAllByCategory(category);
   }
 
   @Override

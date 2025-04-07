@@ -8,6 +8,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
+import nu.nooris.noorisbackend.common.MenuCategory;
 import nu.nooris.noorisbackend.dto.MenuItemDto;
 import nu.nooris.noorisbackend.dto.MenuItemListDto;
 import nu.nooris.noorisbackend.service.MenuService;
@@ -36,6 +37,19 @@ public class MenuController {
   @GetMapping
   public ResponseEntity<MenuItemListDto> getAllMenuItems() {
     return ResponseEntity.ok(menuMapper.toMenuItemListDto(menuService.getAllMenuItems()));
+  }
+
+  @Operation(summary = "Get all menu items by category")
+  @ApiResponses(value = {
+      @ApiResponse(responseCode = "200", description = "Successfully retrieved list of menu items by category",
+          content = @Content(schema = @Schema(implementation = MenuItemListDto.class))),
+      @ApiResponse(responseCode = "400", description = "Invalid category",
+          content = @Content(schema = @Schema(implementation = ProblemDetail.class)))
+  })
+  @GetMapping("/category/{category}")
+  public ResponseEntity<MenuItemListDto> getMenuItemsByCategory(@PathVariable MenuCategory category) {
+    return ResponseEntity.ok(menuMapper.toMenuItemListDto(
+        menuService.getMenuItemsByCategory(category)));
   }
 
   @Operation(summary = "Get a menu item by UUID")
