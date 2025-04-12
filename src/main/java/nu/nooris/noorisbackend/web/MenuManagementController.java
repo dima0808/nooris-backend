@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import nu.nooris.noorisbackend.dto.MenuItemDto;
 import nu.nooris.noorisbackend.service.MenuService;
 import nu.nooris.noorisbackend.service.mapper.MenuMapper;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -34,7 +35,7 @@ public class MenuManagementController {
 
   @Operation(summary = "Create a new menu item")
   @ApiResponses(value = {
-      @ApiResponse(responseCode = "200", description = "Menu item created",
+      @ApiResponse(responseCode = "201", description = "Menu item created",
           content = @Content(schema = @Schema(implementation = MenuItemDto.class))),
       @ApiResponse(responseCode = "400", description = "Invalid request data",
           content = @Content(schema = @Schema(implementation = ProblemDetail.class))),
@@ -46,7 +47,7 @@ public class MenuManagementController {
   @PostMapping
   @PreAuthorize("hasRole('ADMIN')")
   public ResponseEntity<MenuItemDto> createMenuItem(@RequestBody @Valid MenuItemDto menuItemDto) {
-    return ResponseEntity.ok(menuMapper.toMenuItemDto(
+    return ResponseEntity.status(HttpStatus.CREATED).body(menuMapper.toMenuItemDto(
         menuService.createMenuItem(menuMapper.toMenuItem(menuItemDto))));
   }
 
