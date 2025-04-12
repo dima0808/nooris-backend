@@ -9,7 +9,10 @@ import static org.springframework.http.HttpStatus.UNAUTHORIZED;
 import static org.springframework.http.ProblemDetail.forStatusAndDetail;
 
 import lombok.extern.slf4j.Slf4j;
+import nu.nooris.noorisbackend.service.exception.BookingNotFoundException;
+import nu.nooris.noorisbackend.service.exception.InvalidBookingTimeException;
 import nu.nooris.noorisbackend.service.exception.MenuItemNotFoundException;
+import nu.nooris.noorisbackend.service.exception.NoAvailableTablesException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ProblemDetail;
@@ -65,12 +68,31 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
     return ResponseEntity.status(NOT_FOUND).body(problemDetail);
   }
 
+  @ExceptionHandler(BookingNotFoundException.class)
+  public ResponseEntity<ProblemDetail> handleBookingNotFoundException(
+      MenuItemNotFoundException ex) {
+    log.info("Booking not found exception raised");
+    ProblemDetail problemDetail = forStatusAndDetail(NOT_FOUND, ex.getMessage());
+    problemDetail.setType(create("booking-not-found"));
+    problemDetail.setTitle("Booking Not Found");
+    return ResponseEntity.status(NOT_FOUND).body(problemDetail);
+  }
+
   @ExceptionHandler(IllegalArgumentException.class)
   public ResponseEntity<ProblemDetail> handleIllegalArgumentException(IllegalArgumentException ex) {
     log.info("Illegal argument exception raised");
     ProblemDetail problemDetail = forStatusAndDetail(BAD_REQUEST, ex.getMessage());
     problemDetail.setType(create("illegal-argument"));
     problemDetail.setTitle("Illegal Argument");
+    return ResponseEntity.status(BAD_REQUEST).body(problemDetail);
+  }
+
+  @ExceptionHandler({InvalidBookingTimeException.class, NoAvailableTablesException.class})
+  public ResponseEntity<ProblemDetail> handleBookingException(RuntimeException ex) {
+    log.info("Booking exception raised");
+    ProblemDetail problemDetail = forStatusAndDetail(BAD_REQUEST, ex.getMessage());
+    problemDetail.setType(create("booking-error"));
+    problemDetail.setTitle("Booking Error");
     return ResponseEntity.status(BAD_REQUEST).body(problemDetail);
   }
 
