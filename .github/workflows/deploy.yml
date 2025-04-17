@@ -28,5 +28,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e
-            cd /home/${{ secrets.SSH_USER }}/nooris
+            cd nooris
             ./restart_backend.sh
