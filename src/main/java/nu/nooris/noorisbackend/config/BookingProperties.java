@@ -20,6 +20,7 @@ public class BookingProperties {
 
   private Integer slotInterval;
   private Integer durationHours;
+  private String emailReceiver;
 
   public TimeRange getOpeningHoursForDate(LocalDate date) {
     DayOfWeek day = date.getDayOfWeek();

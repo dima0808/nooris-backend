@@ -12,10 +12,12 @@ import nu.nooris.noorisbackend.config.BookingProperties;
 import nu.nooris.noorisbackend.repository.BookingRepository;
 import nu.nooris.noorisbackend.repository.entity.Booking;
 import nu.nooris.noorisbackend.service.BookingService;
+import nu.nooris.noorisbackend.service.EmailService;
 import nu.nooris.noorisbackend.service.exception.BookingNotFoundException;
 import nu.nooris.noorisbackend.service.exception.InvalidBookingTimeException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -23,6 +25,7 @@ public class BookingServiceImpl implements BookingService {
 
   private final BookingRepository bookingRepository;
   private final BookingProperties bookingProperties;
+  private final EmailService emailService;
 
   @Value("${app.booking.duration-hours}")
   private int durationHours;
@@ -52,6 +55,7 @@ public class BookingServiceImpl implements BookingService {
   }
 
   @Override
+  @Transactional
   public Booking createBooking(Booking booking) {
     LocalDateTime start = booking.getStartTime();
     LocalDateTime end = booking.getStartTime().plusHours(2);
@@ -66,7 +70,12 @@ public class BookingServiceImpl implements BookingService {
         end.isAfter(date.atTime(openingHours.end()))) {
       throw new InvalidBookingTimeException("Booking time is outside of opening hours");
     }
-    return bookingRepository.save(booking);
+    Booking savedBooking = bookingRepository.save(booking);
+    emailService.sendBookingEmail(bookingProperties.getEmailReceiver(), savedBooking);
+    if (savedBooking.getEmail() != null) {
+      emailService.sendBookingEmail(savedBooking.getEmail(), savedBooking);
+    }
+    return savedBooking;
   }
 
   @Override
