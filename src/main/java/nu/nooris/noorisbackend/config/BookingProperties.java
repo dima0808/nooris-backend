@@ -16,16 +16,10 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "app.booking")
 public class BookingProperties {
 
-  private Map<String, Integer> tables;
   private Map<String, String> openingHours;
 
-  private Integer maxGuests;
   private Integer slotInterval;
   private Integer durationHours;
-
-  public int getTableCountForGuests(int guests) {
-    return tables.getOrDefault("for-" + guests, 0);
-  }
 
   public TimeRange getOpeningHoursForDate(LocalDate date) {
     DayOfWeek day = date.getDayOfWeek();

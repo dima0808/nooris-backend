@@ -3,6 +3,7 @@ package nu.nooris.noorisbackend.dto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -10,7 +11,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import nu.nooris.noorisbackend.validation.ValidGuests;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -36,7 +36,7 @@ public class BookingDto {
   private String email;
 
   @NotBlank(message = "Number of guests is mandatory")
-  @ValidGuests
+  @Min(value = 1, message = "Number of guests must be at least 1")
   @Schema(description = "Number of guests of the booking", example = "4")
   private Integer guests;
 
