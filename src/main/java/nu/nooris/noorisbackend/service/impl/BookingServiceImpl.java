@@ -72,7 +72,7 @@ public class BookingServiceImpl implements BookingService {
     }
     Booking savedBooking = bookingRepository.save(booking);
     emailService.sendBookingEmail(bookingProperties.getEmailReceiver(), savedBooking);
-    if (savedBooking.getEmail() != null) {
+    if (savedBooking.getEmail() != null && !savedBooking.getEmail().isBlank()) {
       emailService.sendBookingEmail(savedBooking.getEmail(), savedBooking);
     }
     return savedBooking;
