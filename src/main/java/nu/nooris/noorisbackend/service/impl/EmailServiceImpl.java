@@ -36,7 +36,7 @@ public class EmailServiceImpl implements EmailService {
             """,
         booking.getName(),
         booking.getPhoneNumber(),
-        booking.getEmail() == null ? "N/A" : booking.getEmail(),
+        booking.getEmail() == null || booking.getEmail().isBlank() ? "N/A" : booking.getEmail(),
         booking.getGuests(),
         booking.getStartTime().toString().replace("T", " ")
     );
